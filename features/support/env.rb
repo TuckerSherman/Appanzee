@@ -9,11 +9,25 @@ require 'cucumber/ast'
 class AppiumWorld
 end
 
+opts = {
+        appium_lib: {
+        sauce_username: false, 
+        sauce_access_key: false
+        },
+      caps: {
+        platformName: 'ios',
+        platformVersion: '8.1',
+        deviceName: 'iPhone 6',
+        app: '<YOUR APP PATH HERE>',
+        }
+}
+        
 Appium::Driver.new(opts)
 puts(opts)
 Appium.promote_appium_methods AppiumWorld
 
-
+$simulator = Simulator.new(opts[:caps][:deviceName])
+  
 World do
   AppiumWorld.new
 end

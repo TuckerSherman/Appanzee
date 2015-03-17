@@ -7,17 +7,19 @@ class Simulator
     case device
     when "iPhone 4"
       #TODO: set these screen sizes
-      @screenSize = ()
-    when "iPhone 4"
-      @screenSize = ()
+      @screenSize = [960,640]
+    when "iPhone 4s"
+      @screenSize = [960,640]
     when "iPhone 5"
-      @screenSize = ()
+      @screenSize = [1136,640]
+    when "iPhone 5c"
+      @screenSize = [1136,640]
     when "iPhone 5s"
-      @screenSize = ()
+      @screenSize = [1136,640]
     when "iPhone 6"
-      @screenSize = ()
+      @screenSize = [1334,750]
     when "iPhone 6+"
-      @screenSize = ()
+      @screenSize = [2208,1242]
     end
     
   end

@@ -14,11 +14,11 @@ Given(/^Start city run$/) do
 end
 
 Given(/^Start highway drive$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.start_highway_drive
 end
 
 Given(/^Stop simulating location$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.stop_highway_drive
 end
 
 Given(/^Shake the phone$/) do
@@ -30,7 +30,7 @@ Given(/^Trigger low memory warning$/) do
 end
 
 Given(/^hit the home button$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.hit_home
 end
 
 Given(/^switch to springboard page (\d+)$/) do |arg1|
