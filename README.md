@@ -29,9 +29,16 @@ It lets you describe test actions in a clean, concise, English-like manner.
 
 for more info check out cucumber's documentation here - https://github.com/cucumber/cucumber/wiki
 
-
 ## Start your tests
 
 To run the Cucumber features, youll need to change directory to the cucumber
 directory (`cd <'PATH TO THIS REPO'>/cucumber_ios`) and then,
 from the commandline, run 'cucumber'.
+###Options:
+| Tag        | Android           |iOS           |
+| ------------- |:-------------:| :-------------:| 
+| APP     | ../../something.apk   | ../../something.app |
+| PLATFORM_NAME     | android  | ios |
+| PLATFORM_VERSION      | 4.4, 4.5...      | 7.1, 8.1, 8.2 ... |
+| DEVICE_NAME: | samsung galaxy s6   | iPhone 5, iPhone 6 |
+| HUB: | http://localhost:4723/wd/hub | http://localhost:4723/wd/hub |
