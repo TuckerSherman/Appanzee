@@ -52,3 +52,15 @@ end
 Given(/^color blended layers$/) do
   pending # express the regexp above with the code you wish you had
 end
+
+Given(/^I swipe from (\d+)%x (\d+)%y to (\d+)%x (\d+)%y$/) do |startx,starty,endx,endy|
+  workingDirectory = `pwd`
+  sx = startx.to_f/100.0
+  sy = starty.to_f/100.0
+  ex = endx.to_f/100.0
+  ey = endy.to_f/100.0
+  pyCommand = "#{workingDirectory}/features/support/simulator_gestures.py \"iOS Simulator\" #{sx} #{sy} #{ex} #{ey}"
+  pyCommand.gsub!("\n","")
+#   puts pyCommand
+  out = `#{pyCommand}`
+end
