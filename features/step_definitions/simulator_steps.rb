@@ -58,6 +58,11 @@ Given(/^I compare$/) do
   Comparitor.new.run
 end
 
+Given(/^I poke the monkey$/) do
+  monkey = Monkey.new
+  monkey.goWild
+end
+
 Given(/^I swipe from (\d+)%x (\d+)%y to (\d+)%x (\d+)%y$/) do |startx,starty,endx,endy|
   workingDirectory = `pwd`
   sx = startx.to_f/100.0
