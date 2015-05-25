@@ -1,0 +1,6 @@
+# config/cucumber.yml
+
+default: --profile local --out=features_report.json DATASET=ONE
+demo: --tags @demo
+local: SETUP=LOCAL --format progress
+cloud: SETUP=HUB
