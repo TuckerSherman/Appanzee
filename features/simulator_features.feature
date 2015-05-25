@@ -3,6 +3,7 @@
 
 Feature: Demo
 
+@location_scenarios
   Scenario: Location
     * Move to Apple
     * Start bicycle ride
@@ -10,6 +11,7 @@ Feature: Demo
     * Start highway drive
     * Stop simulating location
 
+@physical_controls
   Scenario: Physical Controls
     * Shake the phone
     * Trigger low memory warning
@@ -18,5 +20,9 @@ Feature: Demo
     * re-open the app
     * rotate right
     * rotate left
-    * color blended layers 
+    * color blended layers
 
+@compare
+  Scenario: compare
+    * I compare
+    #* Start the included demo app
