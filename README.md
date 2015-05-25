@@ -1,5 +1,5 @@
-# iOS-simulator-automation-ruby
-The containted cucumber tests are functional automated tests using Appium.
+# Garden Monkey
+The contained cucumber tests are functional automated tests using Appium.  This suite has been designed primarily with iOS testing in mind however android support is coming soon.
 
 
 ## Before you test locally
