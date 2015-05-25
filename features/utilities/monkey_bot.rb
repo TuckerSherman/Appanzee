@@ -20,7 +20,6 @@ class Monkey
 
   def log (message)
     path = "output/monkeyLogs/#{@logName}.txt"
-    puts path
     `echo #{message} >> #{path}`
   end
 
