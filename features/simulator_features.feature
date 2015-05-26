@@ -24,5 +24,6 @@ Feature: Demo
 
 @compare
   Scenario: compare
-    * I compare
-    #* Start the included demo app
+    * I take a before screenshot
+    * I poke the monkey
+    * I take an after shot and compare

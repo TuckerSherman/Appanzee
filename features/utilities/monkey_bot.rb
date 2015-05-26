@@ -1,7 +1,7 @@
 class Monkey
 
   def initialize
-    @logName = Time.now.to_s.partition(" ")[0]
+    @logName = Time.now.strftime("%A-%B%d--%I:%M%p")
   end
 
   def goWild

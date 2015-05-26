@@ -2,15 +2,15 @@
 #  Copyright (c) 2015 Apache licence 2.0
 
 Given(/^Move to Apple$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.move_to_apple
 end
 
 Given(/^Start bicycle ride$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.start_bike_ride
 end
 
 Given(/^Start city run$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.start_city_run
 end
 
 Given(/^Start highway drive$/) do
@@ -22,11 +22,11 @@ Given(/^Stop simulating location$/) do
 end
 
 Given(/^Shake the phone$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.shake
 end
 
 Given(/^Trigger low memory warning$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.low_memory_warning
 end
 
 Given(/^hit the home button$/) do
@@ -34,23 +34,23 @@ Given(/^hit the home button$/) do
 end
 
 Given(/^switch to springboard page (\d+)$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  $simualtor.switch_to_springboard(arg1)
 end
 
 Given(/^re\-open the app$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.re_open_app
 end
 
 Given(/^rotate right$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.rotate_right
 end
 
 Given(/^rotate left$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.rotate_left
 end
 
 Given(/^color blended layers$/) do
-  pending # express the regexp above with the code you wish you had
+  $simulator.color_blended_layers
 end
 
 Given(/^I compare$/) do
@@ -73,4 +73,13 @@ Given(/^I swipe from (\d+)%x (\d+)%y to (\d+)%x (\d+)%y$/) do |startx,starty,end
   pyCommand.gsub!("\n","")
 #   puts pyCommand
   out = `#{pyCommand}`
+end
+
+Given(/^I take a before screenshot$/) do
+  Comparitor.new.takeBeforeImage
+end
+
+Given(/^I take an after shot and compare$/) do
+  isDifferient = $comparitor.compareNow(20)
+  puts isDifferient
 end
