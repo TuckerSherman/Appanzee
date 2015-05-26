@@ -19,7 +19,7 @@ opts = {
     },
     caps: {
         platformName: 'ios',
-        platformVersion: '8.1',
+        platformVersion: '8.3',
         deviceName: 'iPhone 6',
         app: '/Users/tuckersherman/Library/Developer/Xcode/DerivedData/strechyHeader-anvgnoghyjoxewhlbmumystrohsn/Build/Products/Debug-iphonesimulator/strechyHeader.app',
     }
@@ -52,7 +52,7 @@ After do |scenario|
   # Adds screenshots to failing tests
   if scenario.failed?
     puts"FAILURE"
-    file_name = "failure_screenshot_#{Time.now.to_i}.png"
+    file_name = "failure_screenshot_#{Time.now.strftime("%A-%B%d--%I:%M%p")}.png"
     file_path = File.expand_path(File.dirname(__FILE__) + "../../../screenshots/#{file_name}")
 
     $driver.screenshot(file_path)
@@ -63,12 +63,12 @@ end
 
 AfterStep do
   if ENV['FLYOVER'] == "ON"
-    file_name = File.expand_path(File.dirname(__FILE__) + "../../../screenshots/flyover_screenshot_#{Time.now.to_i}.png")
+    file_name = File.expand_path(File.dirname(__FILE__) + "../../../screenshots/flyover_screenshot_#{Time.now.strftime("%A-%B%d--%I:%M%p")}.png")
     $driver.screenshot(file_name)
   end
 end
 
 at_exit do
   puts"End"
-  $thisSession.killSession
+  # $thisSession.killSession
 end
