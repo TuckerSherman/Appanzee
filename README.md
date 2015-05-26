@@ -1,38 +1,25 @@
-# Garden Monkey
-The contained cucumber tests are functional automated tests using Appium.  This suite has been designed primarily with iOS testing in mind however android support is coming soon.
+# Appanzee Mobile Testing Suite
+Appanzee is a mobile test suite built using cucumber to drive appium functional tests for iOS and android apps. Some apple scripts, ruby gems, and python snippets have been thrown in to extend the suite's cababilities far beyond appium's default functionality. For more info check out the docs for: [cucucmber](https://github.com/cucumber/cucumber/wiki), [appium](http://appium.io/slate/en/master/),
 
-
-## Before you test locally
+## Before you test locally install these (if you havent already):
 
 Install Ruby:  `\curl -L https://get.rvm.io | bash -s stable --ruby`
 
 Install Appium:  `brew install node`      # get node.js
- `npm install -g appium`  # get appium
- `npm install wd`         # get appium client     
 
-Install Bundler:  `gem install bundle`
+ `npm install -g appium`  # get appium
+ 
+ `npm install wd`         # get appium client     
+ 
+ `gem install bundle`     #Install Bundler:  
+
+
+## Start your tests
+Configure app path: in env.rb on line 24 you can specify the default path to the app you would like to test
 
 Install Gems from terminal (run from inside the cucumber_ios directory) : `bundle install`
 
-Configure app path: change the path in appium.txt for 'app:' to reach the .app
-on your system (this repository is setup to work without modification in
-jenkins, please do not alter the .gitignore to push changes to appium.txt)
-
-Start Appium Server: Either hit launch from the appium.app GUI or launch Appium
-directly from the command line.   
-
-
-## Cucumber(features)
-
-Cucumber is a Behaviour Driven Design framework that lots of people are keen on.
-It lets you describe test actions in a clean, concise, English-like manner.
-
-for more info check out cucumber's documentation here - https://github.com/cucumber/cucumber/wiki
-
-## Start your tests
-
-To run the Cucumber features, youll need to change directory to the cucumber
-directory (`cd <'PATH TO THIS REPO'>/cucumber_ios`) and then,
+To run the Cucumber features, youll need to change directory to the root of this repository and then,
 from the commandline, run 'cucumber'.
 ###Options:
 | Tag        | Android           |iOS           |
