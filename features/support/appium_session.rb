@@ -62,8 +62,8 @@ class AppiumSession
          tries += 1
          self.confirmStatus
          sleep 1
-         if tries > 50
-           #if after 50 seconds the server still isnt reporting it is ready to take commands kill it and try again
+         if tries > 60
+           #if after 60 seconds the server still isnt reporting it is ready to take commands kill it and try again
            puts "Appium seems to be taking too long to start.  Aborting and trying again"
            self.killSession
            self.launchWithReset(reset)

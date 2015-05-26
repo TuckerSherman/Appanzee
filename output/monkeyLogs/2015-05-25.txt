@@ -1,4 +1,0 @@
-tapped: 318,581
-tapped: 133,686
-tapped: 254,469
-tapped: 16,687
