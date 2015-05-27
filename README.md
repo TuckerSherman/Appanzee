@@ -5,13 +5,13 @@ Appanzee is a mobile test suite built using cucumber to drive appium functional 
 
 Install Ruby:  `\curl -L https://get.rvm.io | bash -s stable --ruby`
 
-Install Appium:  `brew install node`      # get node.js
+Install Node:  `brew install node`
 
- `npm install -g appium`  # get appium
+Install Appium `npm install -g appium`
  
- `npm install wd`         # get appium client     
+Install Appium Client `npm install wd`
  
- `gem install bundle`     #Install Bundler:  
+Install Bundler  `gem install bundle`
 
 
 ## Start your tests
