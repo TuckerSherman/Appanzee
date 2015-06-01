@@ -46,8 +46,6 @@ class Comparitor
 
     x, y = diff.map{ |xy| xy[0] }, diff.map{ |xy| xy[1] }
 
-
-
     if differienceP > threshold.to_i
       images.last.rect(x.min, y.min, x.max, y.max, ChunkyPNG::Color.rgb(0,255,0))
       diffFileName = "RESULT-#{@imgSetID}.png"
