@@ -1,17 +1,27 @@
 # Appanzee Mobile Testing Suite
-Appanzee is a mobile test suite built using cucumber to drive appium functional tests for iOS and android apps. Some apple scripts, ruby gems, and python snippets have been thrown in to extend the suite's cababilities far beyond appium's default functionality. For more info check out the docs for: [cucucmber](https://github.com/cucumber/cucumber/wiki), [appium](http://appium.io/slate/en/master/),
+Appanzee is a mobile test suite built using cucumber to drive appium functional tests for iOS and android apps. Some apple script, ruby gems, and python scripts have been thrown in to extend the suite's cababilities far beyond appium's default functionality, enabling:
 
-## Before you test locally install these (if you havent already):
+*-Monkey testing, with simple recording/reporting format for reproduction*
+
+*-Visual diff analysis, generating screenshots with diffs marked*
+
+*-Reset & no reset sessions, for tests that require existing data*
+
+*-Simulated realistic movement for testing CoreLocation features*
+
+For more info check out the docs for: [cucucmber](https://github.com/cucumber/cucumber/wiki), [appium](http://appium.io/slate/en/master/)
+
+### Before you test locally install these (if you havent already):
 
 Install Ruby:  `\curl -L https://get.rvm.io | bash -s stable --ruby`
 
 Install Node:  `brew install node`
 
-Install Appium `npm install -g appium`
+Install Appium: `npm install -g appium`
  
-Install Appium Client `npm install wd`
+Install Appium Client: `npm install wd`
  
-Install Bundler  `gem install bundle`
+Install Bundler:  `gem install bundle`
 
 
 ## Start your tests
